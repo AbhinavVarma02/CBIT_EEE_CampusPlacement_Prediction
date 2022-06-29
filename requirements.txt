@@ -32,4 +32,4 @@ threadpoolctl==3.1.0
 urllib3==1.26.8
 Werkzeug==2.0.3
 yarg==0.1.9
-gunicorn
+gunicorn==20.1.0
