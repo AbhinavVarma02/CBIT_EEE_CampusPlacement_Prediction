@@ -2,9 +2,9 @@ from flask import Flask, render_template, request
 import pickle
 import numpy as np
 
-import os
-os.getcwd
-os.chdir('C:\\Users\\ABHI ALEXY\\Desktop\\vs code\\placementAnalysis')
+# import os
+# os.getcwd
+# os.chdir('C:\\Users\\ABHI ALEXY\\Desktop\\vs code\\placementAnalysis')
 
 
 model = pickle.load(open('RandomForestClassifiermodel.pkl', 'rb'))
