@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import sklearn
 
-import os
-os.getcwd
-os.chdir('C:\\Users\\ABHI ALEXY\\Desktop\\vs code\\placementAnalysis')
+# import os
+# os.getcwd
+# os.chdir('C:\\Users\\ABHI ALEXY\\Desktop\\vs code\\placementAnalysis')
 
 Data=pd.read_csv("placementdata_EEE.csv")
 # print(Data.head())
