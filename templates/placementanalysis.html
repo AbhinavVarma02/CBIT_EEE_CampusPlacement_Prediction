@@ -1,0 +1,130 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placement predictor</title>
+  
+  <style>
+   
+   #footer {
+    position: fixed;
+    height: 170px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    background-color :Orange;
+    color: black
+  }
+
+    .form-group {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size:large ;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    button {
+      margin-top: 10px;
+      margin-bottom: 9px;
+    }
+
+    body {
+      background-color: black;
+      /* font-family: Verdana, sans-serif; */
+      font-size: 16px;
+      color: gray;  
+      font-family:monospcae monaco;
+      
+    }
+  </style>
+</head>
+<body>
+
+<center>
+  <h1 style="color:#cddbcd; margin-top: 50px; margin-bottom: 50px; font-family:Verdana, Geneva, Tahoma, sans-serif; font-size: xx-large;" class="text-center">PLACEMENT PREDICTOR</h1>
+
+<div class="content"> 
+  <!-- login d-flex flex-row justify-content-center -->
+
+
+<form action="/result" method="POST">
+
+
+    <div class="form-group">
+      <label for="CGPA">CGPA</label>
+      <input type="text" name="CGPA" required="required" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="No_of_projects">Projects</label>
+      <select id="No_of_projects" name="No_of_projects" class="form-control">
+        <option>Select your No.of Quality projects </option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="No_of_Interships">Interships</label>
+      <select id="No_of_Interships" name="No_of_Interships" class="form-control">
+        <option>Select your No_of_Interships in Engineering field</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="DSA_DBMS">DSA_DBMS</label>
+      <select id="DSA_DBMS" name="DSA_DBMS" class="form-control">
+        <option>Rate your knowledge in DSA and DBMS </option>
+        <option value="0">No knowledge</option>
+        <option value="1">Poor</option>
+        <option value="2">Below Average level</option>
+        <option value="3">Average level</option>
+        <option value="4">Decent level</option>
+        <option value="5">Out standing level</option>  
+      </select>
+    </div>
+
+
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+
+    <h1 style="color: #b9b6ba;" class="text-center"> {{ prediction }}</h1>
+    {% for i in probability %}
+    <h1 style="color: #ebedf1;" class="text-center"> {{ i }} %</h1>
+    {% endfor %}
+
+  </form>
+
+</div>
+</center>
+
+ <!--FOOTER-->
+ <footer class="container-fluid " >
+  <div id="footer">
+  <br>
+    <p><b> DEVELOPED BY:</b></p>
+    <div>
+      <p><b> Vathadi Abhinav Varma, 160119734021 EEE-D1, CBIT</b></p>
+      <p><b> Github:<a href="https://github.com/AbhinavVarma02"> https://github.com/AbhinavVarma02</b></a>
+  
+</footer>
+
+
+</body>
+
+</html>
